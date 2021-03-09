@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Se aplica gradiante al fondo */
+
+body{
+    background-image: linear-gradient(to right, $black, $grey);
+    color: $white;
+}
+
+article{
+    justify-content: space-between;
+}
+
+/* Estilos por bloques */
+
+.titulo{
+    color: $chocolate;
+}
+
+.subtitulo{
+    color: $coral;
+}
+
+/* Transform en logo */
+
+.logo{
+    a{
+        img{
+            margin-left: 25%;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.imagenCarrusel{
+    display:block;
+    margin:auto;
+}
+
+.imagenIcono{
+    height: 20rem;
+    width: 20rem;
+}
+
+.parrafo{
+    color: $yellow;
+    font-family: 'Roboto', sans-serif;
+}
+
+.parrafoLargo{
+    color: $yellow;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container{
+    position: relative;
+    padding-bottom: 50%;
+    overflow: hidden;
+    iframe {
+        position: absolute;
+        width: 75%;
+        height: 75%;
+        margin: 25px;
+    }
+}
+
+.tabla{
+    width: 35%;
+    margin-left: 40px;
+    table{
+        border-color: $chocolate;
+        border-style: dashed;
+        width: 100%;
+    }   
+}
+
+.tablas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos de listas */
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    
+  }
+  
+li {
+    border-right: 1px solid #bbb;
+    a {
+        color: $white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: #111;
+        color: $chocolate;
+    }
+}
+
+/* Estilos nuevos de listas con flex*/
+
+.nav{
+    display: flex;
+    width: 100%;
+    li{
+        a{
+            text-decoration:none;
+            display:block;
+        }
+        a:hover{
+            background-color:#434343;
+        }
+        ul{
+            display:none;
+            position:absolute;
+            width:15%;
+            li{
+                position:relative;
+            }
+        }
+    }
+    li:hover > ul{
+        display:block;
+    }
+  }
+
+.nav > li {
+    width: 20%;
+}
+
+.menuContenedor{
+    display: flex;
+    width: 100%;
+}
+
+.lista{
+    width: 75%;
+}
+
+.logo{
+    width: 10%;
+}
+
+.logo{
+    a{
+        img{
+            margin-left: 25%;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+  /* Estilos de pie de página */
+
+  footer{
+    color: $chocolate;
+    background-image: linear-gradient(to right, $black, $grey);
+    text-align: center;
+}
+
+.copy{
+    text-align: center;
+    margin: 10px;
+}
+
+.redes{
+    text-align: right;
+    margin: 10px;
+}
+
+/*media query*/
+
+@media(max-width: 575.98px){
+    .parrafo{
+        color: $red;
+    }
+    .parrafoLargo{
+        color: $red;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .parrafo{
+        color: $orangered;
+    }
+    .parrafoLargo{
+        color:$orangered;
+    }
+}
+
+/* Trancisiones */
+
+.paraTransicion:hover {
+    transition: 3s;
+    font-size: 3rem;
+  }
+
+  /* Focus en input */
+
+  input{
+      transition: all 2s;
+  }
+
+  input:focus{
+      width: 200px;
+      font-size: 24px;
+  }
+
+  /* Animación al título con KeyFrames */
+
+  h1{
+      animation-duration: 2s;
+      animation-name: aparecer;
+  }
+
+  @keyframes aparecer {
+      0%{
+          opacity: 0;
+      }
+
+      100%{
+          opacity: 1;
+      }
+  }
