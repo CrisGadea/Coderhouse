@@ -105,7 +105,9 @@ li {
         color: $chocolate;
     }
 }
-
+#listaCursos{
+    background-image: linear-gradient(to right, $black, $grey);
+}
 /* Estilos nuevos de listas con flex*/
 
 .nav{
